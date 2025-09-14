@@ -1,0 +1,1 @@
+This is my financial trading platform. I needed one because I waanted to be able to easily work with how the market was simulated. If you want to just get the basic files download the algos folder and the paper folder is filled with some implimentations of the code if you want to look at it.
