@@ -25,7 +25,7 @@ class PaperBroker:
         self.algo = algo
         try:
             file = open(
-                f"C:\\Users\\Aiden\\Desktop\\Christmas List\\New folder\\Financial\\paper\\{algo}.txt")
+                f"PATH TO BALANCE\\{algo}.txt")
             self.cash = float(file.readline().strip())
             lines = file.readlines()
             self.positions = []
@@ -61,7 +61,7 @@ class PaperBroker:
         return (cash >= total_cost, total_cost)
 
     def log_trade(pos):
-        with open("C:\\Users\\Aiden\\Desktop\\Christmas List\\New folder\\Financial\\paper\\history.txt", "a") as file:
+        with open("PATH TO TRADE HISTORY", "a") as file:
             file.write(pos.str_data)
 
     def open_position(self, symbol, side, qty, price):
@@ -128,7 +128,7 @@ class PaperBroker:
         return value
 
     def exit(self):
-        with open(f"C:\\Users\\Aiden\\Desktop\\Christmas List\\New folder\\Financial\\paper\\{self.algo}.txt", "w") as file:
+        with open(f"PATH TO ALGO\\{self.algo}.txt", "w") as file:
             file.write(str(self.cash) + '\n')
             for pos in self.positions:
                 file.write(pos.str_data() + '\n')
@@ -147,3 +147,4 @@ class PaperBroker:
             print(
                 f"Closed {pos.side} position: {pos.tkr}, {pos.units} units at {price}")
             self.positions.remove(pos)
+
