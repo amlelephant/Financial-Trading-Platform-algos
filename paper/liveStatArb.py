@@ -18,8 +18,8 @@ print(broker.cash)
 algo = StatisticalArbitrage(broker.cash/len(all_symbols), broker.positions)
 
 # Alpaca stuff
-API_KEY = 'PK9JPD2GEODC258EU0T7'
-SECRET_KEY = 'QgOomZbX97g762LSmfwfTHCBkLmAWV48zHLpew22'
+API_KEY = ''
+SECRET_KEY = ''
 BASE_URL = 'https://paper-api.alpaca.markets'
 api = tradeapi.REST(API_KEY, SECRET_KEY, base_url=BASE_URL)
 
@@ -105,3 +105,4 @@ while True:
     print('=' * 50)
     print()
     time.sleep(wait_time)
+
